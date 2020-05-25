@@ -1,0 +1,70 @@
+<div>
+    {{ selectedFeatures | json }}
+</div>
+
+
+<button type="submit" (click)="onAdd()" class="btn btn-warning btn-sm mt-2">Add</button>
+<button type="submit" (click)="onRemove()" class="btn btn-warning btn-sm mt-2">Remove</button><br>
+<br><br>
+
+
+<table border="3" align="center">
+    <tr>
+        <td>id</td>
+        <td>num</td>
+        <td>name</td>
+        <td>img</td>
+        <td>type</td>
+        <td>height</td>
+        <td>weight</td>
+        <td>candy</td>
+        <td>candy_count</td>
+        <td>egg</td>
+        <td>spawn_chance</td>
+        <td>avg_spawns</td>
+        <td>spawn_time</td>
+        <td>multipliers</td>
+        <td>weaknesses</td>
+        
+       
+        
+    </tr>
+    <tr *ngFor="let obj of model">
+        <td>{{obj.id}}</td>
+        <td>{{obj.num}}</td>
+        <td>{{obj.name}}</td>
+        <td>{{obj.img}}</td>
+        <td>{{obj.type}}</td>
+        <td>{{obj.height}}</td>
+        <td>{{obj.weight}}</td>
+        <td>{{obj.candy}}</td>
+        <td>{{obj.candy_count}}</td>
+        <td>{{obj.egg}}</td>
+        <td>{{obj.spawn_chance}}</td>
+        <td>{{obj.avg_spawns}}</td>
+        <td>{{obj.spawn_time}}</td>
+        <td>{{obj.multipliers}}</td>
+        <td>{{obj.weaknesses}}</td>
+      
+    </tr>
+</table>
+<br><br>
+
+
+
+
+
+<table border="2" align="center"> 
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>gender</th>
+        <th>button</th>
+    </tr>
+    <tr *ngFor="let data of user"> 
+       <td> {{data.name}}</td>
+       <td> {{data.Age}}</td>
+       <td> {{data.gender}}</td>
+<td><button (click)="Submit(data)">submit</button></td>
+    </tr>
+</table>
